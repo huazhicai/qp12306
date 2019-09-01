@@ -10,9 +10,9 @@ class API(object):
     # 验证码校验
     CHECK_YZM_URL = 'https://kyfw.12306.cn/passport/captcha/captcha-check'
     # 登录验证 POST
-    #username: 936@qq.com
-    #password: 123234
-    #appid: otn
+    # username: 936@qq.com
+    # password: 123234
+    # appid: otn
     CHECK_ACCOUNT_PWD_URL = 'https://kyfw.12306.cn/passport/web/login'
 
 
@@ -22,10 +22,10 @@ class APITool(QObject):
     @classmethod
     def download_yzm(cls):
         response = cls.session.get(API.GET_YZM_URL)
-        with open('C:\\Users\\Dell\\Desktop\\qp12306\\API\\yzm.jpeg', 'wb') as f:
+        with open('../API/yzm.jpg', 'wb') as f:
             f.write(response.content)
 
-        return "C:\\Users\\Dell\\Desktop\\qp12306\\API\\yzm.jpeg"
+        return "../API/yzm.jpg"
 
     @classmethod
     def check_yzm(cls, yzm):

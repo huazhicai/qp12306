@@ -51,6 +51,7 @@ class LoginPane(QWidget, Ui_Form):
         else:
             self.login_btn.setEnabled(True)
 
+
 if __name__ == '__main__':
     import sys
 
